@@ -158,9 +158,21 @@ function interp(k,v,row){
   }
   return null;
 }
-function showVal(k,v){
+function showVal(k,v,r){
   if(k==='slowburn'||k==='known_playground'||k==='bsec') return v==='1'?'yes':'no';
-  if(v===''||v==null) return '<span class="mut">-</span>';
+  if(v===''||v==null||v==='-'||v==='—'){
+    var fin=r&&/N\/A|financial/i.test(r.solvency||'');
+    if(k==='altman_z') return '<span class="mut">'+(fin?'N/A — financial sector (Altman-Z is for non-financials)':'not available')+'</span>';
+    if(k==='solvency') return '<span class="mut">not available</span>';
+    if(k==='earnings_quality') return '<span class="mut">no red flag (not paper-profit)</span>';
+    if(k==='cash_conv'||k==='roe'||k==='roa'||k==='solv_trend') return '<span class="mut">not disclosed</span>';
+    if(k==='fair_value'||k==='fv_range'||k==='upside_pct'){
+      var eps=parseFloat(r&&r.eps);
+      return '<span class="mut">'+((isNaN(eps)||eps<=0)?'N/A — no positive earnings to value':'N/A — high-risk, not valued')+'</span>';
+    }
+    if(k==='beta'||k==='mkt_corr') return '<span class="mut">not available</span>';
+    return '<span class="mut">—</span>';
+  }
   return esc(v);
 }
 
@@ -325,7 +337,7 @@ function showDetail(scrip){
       var g=GLOSS[k]||{label:k}; var v=r[k];
       var ip=interp(k,v,r);
       var iptxt=ip&&ip[0]?' <span class="di '+ip[1]+'">('+esc(ip[0])+')</span>':'';
-      h+='<div class="drow"><div class="dl">'+esc(g.label)+q(k)+'</div><div class="dv">'+showVal(k,v)+iptxt+'</div></div>';
+      h+='<div class="drow"><div class="dl">'+esc(g.label)+q(k)+'</div><div class="dv">'+showVal(k,v,r)+iptxt+'</div></div>';
     });
     h+='</div>';
   });
