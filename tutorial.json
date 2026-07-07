@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "modules": [
+    {
+      "id": "basics",
+      "title": "Stock market basics",
+      "sub": "Shares, DSE, and how buying works",
+      "lessons": [
+        {"title": "What is a share?", "body": "A share is a tiny piece of ownership in a company. If the company does well and grows, the share can become worth more; if it does badly, worth less. You make money two ways: the price rising, and dividends (a slice of profit the company pays out).", "takeaway": "A share = part-ownership of a real business."},
+        {"title": "What is the DSE?", "body": "The Dhaka Stock Exchange (DSE) is the marketplace where shares of Bangladeshi listed companies are bought and sold. Prices move all day during market hours (Sun–Thu, 10:00–14:30) based on supply and demand.", "takeaway": "The DSE is where DSE-listed shares trade."},
+        {"title": "You need a BO account", "body": "To buy shares you open a BO (Beneficiary Owner) account through a licensed broker — a one-time setup with your NID and bank details. You add money to the broker account, then place buy/sell orders in their app. Shares settle to your BO account, usually the next business day.", "takeaway": "Broker + BO account = your gateway to the market."},
+        {"title": "This app doesn't trade", "body": "DSE Analyst only shows analysis of public data. It never places orders and isn't connected to any broker. You buy and sell yourself, in your broker's app. Every decision is yours.", "takeaway": "Analysis here, orders in your broker app."}
+      ],
+      "quiz": [
+        {"q": "What does owning a share mean?", "opts": ["A loan to the company", "Part-ownership of the company", "A fixed monthly income"], "ans": 1, "why": "A share is a small ownership stake in the business."},
+        {"q": "When is the DSE open?", "opts": ["24/7", "Sun–Thu, 10:00–14:30", "Only Fridays"], "ans": 1, "why": "DSE trades Sunday to Thursday, 10:00 to 14:30."},
+        {"q": "Can this app place a buy order for you?", "opts": ["Yes, automatically", "No — you order in your broker app", "Only for dividends"], "ans": 1, "why": "The app is analysis-only; you trade through your broker."}
+      ]
+    },
+    {
+      "id": "app",
+      "title": "Reading this app",
+      "sub": "The score, the colours, live vs daily",
+      "lessons": [
+        {"title": "The 0–100 score", "body": "Each stock gets a data score that blends fundamentals, financial health, dividend safety, and how clean vs manipulation-prone its price history looks. Higher = stronger and cleaner. It is a descriptive data score — not an investment rating, recommendation, or prediction.", "takeaway": "The score describes quality + cleanliness, not a buy signal."},
+        {"title": "Green, amber, red", "body": "Colours mean the same everywhere: green = stronger / good, amber = caution, red = weaker / risk. A red dot on a hot gainer is a warning before you tap. Bands: Strong 80+, Fair 60–79, Mixed 40–59, Weak 20–39, High-risk under 20.", "takeaway": "Green good, red risky — consistently."},
+        {"title": "Live price vs daily analysis", "body": "Prices update live during market hours. The deep analysis — score, health, cycles, setups — refreshes after each market close (plus intraday setup scans). So a price can move before the analysis catches up; that's why each screen shows an 'as of' time.", "takeaway": "Price is live; analysis is timestamped."},
+        {"title": "It explains, you decide", "body": "The app shows measured evidence — what worked, what failed, the risks, the levels — but never tells you to buy or sell. Read the evidence, then make your own call.", "takeaway": "Evidence in, decision yours."}
+      ],
+      "quiz": [
+        {"q": "A score of 85 means…", "opts": ["Guaranteed to go up", "Strong quality + clean history", "You must buy now"], "ans": 1, "why": "The score describes quality and cleanliness — not a prediction or a buy call."},
+        {"q": "Red usually means…", "opts": ["On sale, buy it", "Weaker / higher risk", "Sold out"], "ans": 1, "why": "Red flags weakness or risk across the app."},
+        {"q": "Why show an 'as of' time?", "opts": ["Decoration", "Price is live but analysis refreshes on a schedule", "It's the current time"], "ans": 1, "why": "Live price can move ahead of the scheduled analysis refresh."}
+      ]
+    },
+    {
+      "id": "chart",
+      "title": "Reading a chart",
+      "sub": "Candles, averages, RSI, levels",
+      "lessons": [
+        {"title": "Candles", "body": "Each candle shows a day's open, high, low and close. A tall green body = buyers won the day; a tall red body = sellers did. Long wicks show rejection — price went there but came back. Patterns are tendencies, not certainties.", "takeaway": "A candle = one day's battle between buyers and sellers."},
+        {"title": "Moving average & value zone", "body": "A moving average (e.g. 50-day) smooths price into a trend line. The 'value zone' is where the stock has usually traded around its average. Price inside or below the zone = its normal/lower range; far above = stretched.", "takeaway": "Value zone = the stock's usual range vs its average."},
+        {"title": "RSI — overbought / oversold", "body": "RSI runs 0–100. Above ~70 = overbought (run hot, often pauses); below ~30 = oversold (beaten down, sometimes bounces). On the DSE, deeply oversold sound stocks have historically bounced more reliably than chasing overbought ones.", "takeaway": "High RSI = hot; low RSI = beaten down."},
+        {"title": "Support & resistance", "body": "Support is a price where buyers have stepped in before (a floor); resistance is where sellers have (a ceiling). The app lists these levels with the live distance. They are observed levels, not targets or guarantees.", "takeaway": "Support = floor, resistance = ceiling — observed, not promised."}
+      ],
+      "quiz": [
+        {"q": "A long green candle body means…", "opts": ["Sellers dominated", "Buyers dominated that day", "Nothing happened"], "ans": 1, "why": "A tall green body means the close was well above the open — buyers won."},
+        {"q": "RSI of 78 suggests…", "opts": ["Oversold, cheap", "Overbought, run hot", "Broken data"], "ans": 1, "why": "Above ~70 is overbought territory."},
+        {"q": "Support is…", "opts": ["A guaranteed floor", "A level where buyers stepped in before", "The highest price ever"], "ans": 1, "why": "Support is an observed level of past buying — not a guarantee."}
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "Spotting risk",
+      "sub": "Pumps, Z-category, over-concentration",
+      "lessons": [
+        {"title": "Pump-and-dump signs", "body": "A stock that spikes hard on huge volume with weak or falling earnings is a classic manipulation pattern. The prettiest charts often sit on the worst companies. The app flags these; treat them as caution, not opportunity.", "takeaway": "Explosive chart + weak fundamentals = danger, not a gift."},
+        {"title": "Z-category", "body": "DSE puts failing companies (no AGM, accumulated losses, insolvent) in Z-category. They are the highest-risk group, often can't be bought on margin, and can keep falling. A high price on a Z stock is not a bargain.", "takeaway": "Z = the riskiest shelf on the exchange."},
+        {"title": "Chasing overbought", "body": "Buying after a stock has already run far above its value zone (overbought) usually gives worse odds on the DSE than waiting for a dip. Structure going up is not the same as a good entry price.", "takeaway": "A rising stock can still be a bad entry."},
+        {"title": "Over-concentration", "body": "Putting a big share of your money in one stock means one bad day hurts everything. If any single holding is more than ~40% of your portfolio, that's a concentration risk the app will warn about.", "takeaway": "Don't let one stock decide your whole outcome."}
+      ],
+      "quiz": [
+        {"q": "A stock spikes on huge volume but earnings are falling. This is…", "opts": ["A safe bet", "A possible pump — caution", "A dividend"], "ans": 1, "why": "Big spike + weak fundamentals is the pump-and-dump signature."},
+        {"q": "Z-category means…", "opts": ["Zero risk", "Failing / highest-risk companies", "Zakat-exempt"], "ans": 1, "why": "Z-category holds failing, highest-risk companies."},
+        {"q": "One stock is 55% of your portfolio. That is…", "opts": ["Ideal focus", "Over-concentration risk", "Required by DSE"], "ans": 1, "why": "Too much in one name means one bad day moves everything."}
+      ]
+    },
+    {
+      "id": "discipline",
+      "title": "Investing with discipline",
+      "sub": "Diversify, size, dividends, review",
+      "lessons": [
+        {"title": "Diversify", "body": "Spread money across several stocks and sectors so no single company can sink you. A common beginner mistake is putting everything into one 'hot tip'.", "takeaway": "Many small bets beat one big gamble."},
+        {"title": "Position sizing", "body": "Decide in advance how much of your money goes into each stock, and never invest money you can't afford to lose or that is borrowed. Size each position so one loss won't hurt you badly.", "takeaway": "Size positions so one loss can't wreck you."},
+        {"title": "Dividends & record dates", "body": "To receive a dividend you must hold the share before the record date. Companies announce dividends and record dates; the app shows the upcoming ones. A high yield on a weak company can be a trap if the payout isn't sustainable.", "takeaway": "Hold before the record date; check the payout is sustainable."},
+        {"title": "When to reconsider", "body": "Reasons people re-examine a holding: the fundamentals deteriorate (dividend cut, distress), the price stretches far above its value zone, or the original reason for buying is no longer true. The app surfaces these; the decision stays yours.", "takeaway": "Reconsider when the reason you bought changes."}
+      ],
+      "quiz": [
+        {"q": "Diversifying means…", "opts": ["All-in on one stock", "Spreading across several stocks", "Only buying Z stocks"], "ans": 1, "why": "Diversification spreads risk across many holdings."},
+        {"q": "To get a dividend you must…", "opts": ["Buy any time that year", "Hold before the record date", "Sell before the AGM"], "ans": 1, "why": "You must hold the share before the record date."},
+        {"q": "A very high dividend yield on a weak company…", "opts": ["Is always great", "Can be a trap if unsustainable", "Is illegal"], "ans": 1, "why": "If the company can't sustain the payout, the yield can be a trap."}
+      ]
+    }
+  ]
+}
