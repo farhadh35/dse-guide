@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Real-time Event Game — Wireframe Preview</title>
+  <style>
+    body{font-family:Inter,system-ui,Segoe UI,Arial;margin:0;background:#0f1724;color:#e6eef8}
+    .container{display:flex;gap:18px;padding:20px}
+    .panel{background:#0b1220;border:1px solid #1f2a3a;border-radius:8px;padding:14px;flex:1;min-width:260px}
+    h2{margin:6px 0 12px;font-size:16px}
+    .feed{height:520px;overflow:auto;background:linear-gradient(180deg,#061021,transparent);padding:8px;border-radius:6px}
+    .event{padding:8px;margin-bottom:8px;border-radius:6px;background:#081827;border-left:4px solid #2b8cf4}
+    .board{height:520px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .card{width:80%;padding:18px;border-radius:10px;background:linear-gradient(180deg,#0b1b2a,#07121a);box-shadow:0 6px 16px rgba(0,0,0,.6);text-align:center}
+    .controls{display:flex;gap:8px;align-items:center;margin-top:14px}
+    button{background:#1f6feb;color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+    button.ghost{background:transparent;border:1px solid #334155}
+    .stats{display:flex;flex-direction:column;gap:8px}
+    .stat{padding:8px;border-radius:6px;background:#071826;text-align:center}
+    .flow{margin-top:12px;background:#071826;padding:10px;border-radius:6px}
+    .step{padding:8px;margin:6px 0;border-radius:6px;background:#0b1b29}
+    .hint{color:#9fb3d8;font-size:13px}
+    small{color:#8aa0bf}
+    footer{padding:12px;text-align:center;color:#7c98b8}
+  </style>
+</head>
+<body>
+  <header style="padding:12px 20px;border-bottom:1px solid #0b1220;background:linear-gradient(90deg,#071426,#041224)">
+    <strong>Real-time Event Game — Interactive Wireframe</strong>
+    <div style="float:right;color:#9fb3d8;font-size:13px;margin-top:3px">Prototype: interactive HTML preview</div>
+  </header>
+
+  <main class="container">
+    <section class="panel" id="left">
+      <h2>Event Feed</h2>
+      <div class="hint">Incoming events stream here. Click an event to react.</div>
+      <div id="feed" class="feed" aria-live="polite"></div>
+
+      <div style="margin-top:12px">
+        <div class="hint">Simulation controls</div>
+        <div class="controls">
+          <button id="play">Play</button>
+          <button id="pause" class="ghost">Pause</button>
+          <label style="color:#9fb3d8">Speed</label>
+          <select id="speed">
+            <option value="1500">Normal</option>
+            <option value="700">Fast</option>
+            <option value="300">Turbo</option>
+          </select>
+          <button id="clear" class="ghost">Clear</button>
+        </div>
+      </div>
+
+      <div class="flow">
+        <strong>UI Flow</strong>
+        <div class="step">1. Events arrive in feed (signals.json/news.json)</div>
+        <div class="step">2. Player reacts via action buttons shown on main card</div>
+        <div class="step">3. Score is adjusted and feedback flashes</div>
+        <div class="step">4. Stats update; next event streams</div>
+      </div>
+    </section>
+
+    <section class="panel" id="center">
+      <h2>Game Board</h2>
+      <div class="board">
+        <div id="mainCard" class="card">
+          <div id="eventTitle" style="font-size:18px;font-weight:600">Waiting for events...</div>
+          <div id="eventBody" style="margin-top:10px;color:#9fb3d8">Events that require action will appear here. Try reacting with the sample actions.</div>
+
+          <div class="controls" style="justify-content:center">
+            <button id="actionAccept">Acknowledge</button>
+            <button id="actionIgnore" class="ghost">Ignore</button>
+            <button id="actionEscalate" class="ghost">Escalate</button>
+          </div>
+
+          <div id="feedback" style="margin-top:12px;color:#bfe6a9;font-weight:600"></div>
+        </div>
+
+        <div style="margin-top:14px;width:80%">
+          <div class="hint">Game rules</div>
+          <small>React to events correctly to gain points. Some events are "urgent" — escalate for bonus. Wrong reactions reduce score.</small>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel" id="right">
+      <h2>Stats & Controls</h2>
+      <div class="stats">
+        <div class="stat">Score: <span id="score">0</span></div>
+        <div class="stat">Events processed: <span id="processed">0</span></div>
+        <div class="stat">Time: <span id="time">0s</span></div>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="hint">Design notes</div>
+        <small>- Events map to challenge types
+- Difficulty scales with levels.json
+- News feed can create global modifiers</small>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    Open this file in a browser. To enable fetch of local JSON files, serve directory with a simple HTTP server (e.g., python -m http.server).
+  </footer>
+
+  <script>
+    // Basic interactive simulation. Attempts to fetch signals.json/news.json; falls back to sample data.
+    const feedEl = document.getElementById('feed');
+    const eventTitle = document.getElementById('eventTitle');
+    const eventBody = document.getElementById('eventBody');
+    const scoreEl = document.getElementById('score');
+    const processedEl = document.getElementById('processed');
+    const timeEl = document.getElementById('time');
+    const feedbackEl = document.getElementById('feedback');
+
+    let score = 0, processed = 0, seconds = 0, timer;
+    let eventQueue = [];
+    let playing = false;
+    let interval = 1500;
+
+    function niceEvent(e){
+      return {id: e.id||Math.random().toString(36).slice(2,8), title: e.title||e.headline||'Event', body: e.body||e.summary||JSON.stringify(e).slice(0,80), urgent: !!e.urgent}
+    }
+
+    async function loadData(){
+      const paths = ['signals.json','news.json','index.json'];
+      for(const p of paths){
+        try{
+          const r = await fetch(p);
+          if(!r.ok) continue;
+          const j = await r.json();
+          if(Array.isArray(j)){
+            eventQueue.push(...j.map(niceEvent));
+          } else if (j && typeof j === 'object'){
+            // prefer arrays inside object
+            const arr = Object.values(j).flat().filter(x=>typeof x==='object');
+            eventQueue.push(...arr.map(niceEvent));
+          }
+        }catch(e){/*ignore*/}
+      }
+
+      if(eventQueue.length===0){
+        // fallback sample events
+        eventQueue = [
+          niceEvent({title:'Sensor spike','body':'Temperature exceeded threshold','urgent:true}),
+          niceEvent({title:'User report','body':'Minor glitch reported','urgent:false}),
+          niceEvent({title:'Network anomaly','body':'Packet loss detected','urgent:true}),
+          niceEvent({title:'News flash','body':'Breaking update affects scoring','urgent:false})
+        ];
+      }
+      // show initial feed
+      renderFeed();
+    }
+
+    function renderFeed(){
+      feedEl.innerHTML = '';
+      for(const ev of eventQueue.slice(0,50)){
+        const d = document.createElement('div');
+        d.className='event';
+        d.tabIndex=0;
+        d.innerHTML = `<strong>${ev.title}</strong><div style="font-size:13px;color:#9fb3d8">${ev.body}</div>`;
+        d.onclick = ()=>selectEvent(ev);
+        feedEl.appendChild(d);
+      }
+    }
+
+    let currentEvent = null;
+    function selectEvent(ev){
+      currentEvent = ev;
+      eventTitle.textContent = ev.title;
+      eventBody.textContent = ev.body + (ev.urgent? ' (URGENT)':'' );
+      feedbackEl.textContent = '';
+    }
+
+    function shiftEvent(){
+      if(eventQueue.length===0) return;
+      const ev = eventQueue.shift();
+      selectEvent(ev);
+      processed++;
+      processedEl.textContent = processed;
+      // add to feed UI
+      const d = document.createElement('div');
+      d.className='event';
+      d.innerHTML = `<strong>${ev.title}</strong><div style="font-size:13px;color:#9fb3d8">${ev.body}</div>`;
+      feedEl.insertBefore(d, feedEl.firstChild);
+      // limit feed size
+      while(feedEl.childElementCount>120) feedEl.removeChild(feedEl.lastChild);
+    }
+
+    function react(action){
+      if(!currentEvent) return feedbackEl.textContent='No event selected';
+      const correct = (currentEvent.urgent && action==='escalate') || (!currentEvent.urgent && action==='ack');
+      if(correct){ score += currentEvent.urgent? 20 : 10; feedbackEl.style.color='#bfe6a9'; feedbackEl.textContent='Good reaction! +'+(currentEvent.urgent?20:10);} 
+      else { score -= 5; feedbackEl.style.color='#ffb4b4'; feedbackEl.textContent='Incorrect reaction -5'; }
+      scoreEl.textContent = score;
+      // flash card
+      const card = document.getElementById('mainCard');
+      card.animate([{boxShadow:'0 6px 16px rgba(0,0,0,.6)'},{boxShadow: currentEvent.urgent? '0 0 18px rgba(255,90,90,.8)' : '0 0 18px rgba(90,180,255,.6)'} ,{boxShadow:'0 6px 16px rgba(0,0,0,.6)'}],{duration:600});
+      // auto next
+      setTimeout(()=>{ shiftEvent(); renderFeed(); }, 300);
+    }
+
+    document.getElementById('actionAccept').onclick = ()=>react('ack');
+    document.getElementById('actionIgnore').onclick = ()=>react('ignore');
+    document.getElementById('actionEscalate').onclick = ()=>react('escalate');
+
+    document.getElementById('play').onclick = ()=>{ if(playing) return; playing=true; runLoop();};
+    document.getElementById('pause').onclick = ()=>{ playing=false; };
+    document.getElementById('clear').onclick = ()=>{ eventQueue=[]; renderFeed(); };
+    document.getElementById('speed').onchange = (e)=>{ interval=parseInt(e.target.value,10); };
+
+    function runLoop(){
+      if(!playing) return;
+      shiftEvent(); renderFeed();
+      setTimeout(()=>{ if(playing) runLoop(); }, interval);
+    }
+
+    // timer
+    function startTimer(){ timer = setInterval(()=>{ seconds++; timeEl.textContent = seconds + 's'; },1000); }
+
+    // init
+    (async ()=>{ await loadData(); selectEvent(eventQueue[0]); renderFeed(); startTimer(); })();
+
+  </script>
+</body>
+</html>
