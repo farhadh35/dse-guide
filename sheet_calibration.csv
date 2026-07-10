@@ -1,13 +1,13 @@
 kind,pred_bin,realized_up,n
-bin,10-20%,0.1,30
-bin,20-30%,0.285,193
-bin,30-40%,0.333,4418
-bin,40-50%,0.417,16658
-bin,50-60%,0.475,10790
-bin,60-70%,0.514,3509
-bin,70-80%,0.575,567
-bin,80-90%,0.649,111
-bin,90-100%,0.889,9
-base_rate,,0.436,36285
+bin,10-20%,0.167,42
+bin,20-30%,0.285,249
+bin,30-40%,0.344,5485
+bin,40-50%,0.427,19362
+bin,50-60%,0.506,13447
+bin,60-70%,0.542,4632
+bin,70-80%,0.574,940
+bin,80-90%,0.599,329
+bin,90-100%,0.608,125
+base_rate,,0.456,44611
 regime,bull,-0.58,
-health,"The probability ordering is real but the edge is thin (overall Brier near the base rate). 'Price reclaims MA200' calibrates best (Brier 0.2363), while 'RSI<30 oversold' is the least reliable (Brier 0.2542) — its raw probabilities are the most over/under-confident. Walk-forward calibration improves out-of-sample. Suggestion: down-weight 'RSI<30 oversold' or apply isotonic recalibration to it before combining signals.",0.2465,well-calibrated
+health,"The probability ordering is real but the edge is thin (overall Brier near the base rate). '52w-high breakout' calibrates best (Brier 0.2348), while 'RSI<30 oversold' is the least reliable (Brier 0.2519) — its raw probabilities are the most over/under-confident. Walk-forward calibration improves out-of-sample. Suggestion: down-weight 'RSI<30 oversold' or apply isotonic recalibration to it before combining signals.",0.2467,well-calibrated
