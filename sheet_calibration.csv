@@ -1,14 +1,11 @@
 kind,pred_bin,realized_up,n
-bin,0-10%,0.0,6
-bin,10-20%,0.154,143
-bin,20-30%,0.199,826
-bin,30-40%,0.304,11740
-bin,40-50%,0.401,41681
-bin,50-60%,0.465,15945
-bin,60-70%,0.519,3156
-bin,70-80%,0.553,461
-bin,80-90%,0.654,78
-bin,90-100%,0.857,7
+bin,20-30%,0.186,237
+bin,30-40%,0.288,9192
+bin,40-50%,0.397,47351
+bin,50-60%,0.476,15056
+bin,60-70%,0.524,2066
+bin,70-80%,0.569,137
+bin,80-90%,0.75,4
 base_rate,,0.403,74043
 regime,bull,-0.58,
-health,"The probability ordering is real but the edge is thin (overall Brier near the base rate). 'RSI>70 overbought' calibrates best (Brier 0.2294), while 'Gravestone Doji' is the least reliable (Brier 0.2514) — its raw probabilities are the most over/under-confident. Walk-forward calibration improves out-of-sample. Suggestion: down-weight 'Gravestone Doji' or apply isotonic recalibration to it before combining signals.",0.2402,well-calibrated
+health,"The probability ordering is real but the edge is thin (overall Brier near the base rate). 'RSI>70 overbought' calibrates best (Brier 0.2297), while 'Gravestone Doji' is the least reliable (Brier 0.2518) — its raw probabilities are the most over/under-confident. Walk-forward calibration improves out-of-sample. Suggestion: down-weight 'Gravestone Doji' or apply isotonic recalibration to it before combining signals.",0.2403,well-calibrated
