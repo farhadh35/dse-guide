@@ -60,7 +60,6 @@ scrip,kind,a,b,c,d
 1STPRIMFMF,signal,Stochastic>80,316,56.0,-3.5
 1STPRIMFMF,signal,Above upper Bollinger,239,52.7,-5.42
 1STPRIMFMF,signal,RSI>70 overbought,176,50.0,-6.97
-1STPRIMFMF,bounce,2025-06-23,17.4,25.5,47
 1STPRIMFMF,bounce,2025-08-27,19.4,26.4,36
 1STPRIMFMF,bounce,2025-11-16,15.8,20.0,27
 1STPRIMFMF,bounce,2025-12-02,18.0,22.9,27
@@ -68,6 +67,7 @@ scrip,kind,a,b,c,d
 1STPRIMFMF,bounce,2026-03-09,16.7,19.6,17
 1STPRIMFMF,bounce,2026-04-05,17.4,21.2,22
 1STPRIMFMF,bounce,2026-05-13,18.2,22.9,26
+1STPRIMFMF,bounce,2026-06-23,21.0,25.9,23
 AAMRANET,signal,52w-low breakdown,96,65.6,2.25
 AAMRANET,signal,Stretch<-30% vs MA200,106,57.5,2.08
 AAMRANET,signal,Above the Stomach,40,55.0,1.69
@@ -611,7 +611,6 @@ AIL,signal,RSI<30 oversold,109,43.1,-1.42
 AIL,signal,Bullish Engulfing,40,37.5,-2.57
 AIL,signal,Above upper Bollinger,108,54.6,-3.24
 AIL,signal,RSI>70 overbought,86,45.3,-3.54
-AIL,bounce,2025-06-23,42.0,51.8,23
 AIL,bounce,2025-07-27,45.4,63.3,39
 AIL,bounce,2025-10-20,44.1,51.7,17
 AIL,bounce,2025-11-16,38.4,47.8,24
@@ -619,6 +618,7 @@ AIL,bounce,2026-02-02,26.2,31.0,18
 AIL,bounce,2026-03-03,26.3,32.8,25
 AIL,bounce,2026-04-28,27.4,36.5,33
 AIL,bounce,2026-05-17,30.2,36.3,20
+AIL,bounce,2026-06-23,31.8,40.5,27
 ALARABANK,signal,RSI<30 oversold,222,56.8,1.65
 ALARABANK,signal,Below lower Bollinger,193,49.7,0.46
 ALARABANK,signal,Bearish Marubozu,87,49.4,0.45
@@ -1282,7 +1282,6 @@ ATLASBANG,signal,Below the Stomach,65,47.7,-1.23
 ATLASBANG,signal,Three Black Crows,32,46.9,-1.3
 ATLASBANG,signal,Double Bottom,37,32.4,-1.36
 ATLASBANG,signal,MACD bear cross,133,46.6,-1.4
-ATLASBANG,bounce,2025-07-29,55.0,67.9,23
 ATLASBANG,bounce,2025-09-22,55.0,66.0,20
 ATLASBANG,bounce,2025-11-16,44.2,55.9,26
 ATLASBANG,bounce,2025-11-25,50.0,58.4,17
@@ -1290,6 +1289,7 @@ ATLASBANG,bounce,2026-03-01,52.0,65.0,25
 ATLASBANG,bounce,2026-03-08,57.1,81.5,43
 ATLASBANG,bounce,2026-04-06,66.2,80.9,22
 ATLASBANG,bounce,2026-04-29,67.1,77.3,15
+ATLASBANG,bounce,2026-06-17,68.3,102.0,49
 AZIZPIPES,signal,Bullish Marubozu,33,48.5,4.28
 AZIZPIPES,signal,52w-high breakout,78,47.4,3.18
 AZIZPIPES,signal,Stretch<-30% vs MA200,141,67.4,2.82
@@ -2444,7 +2444,6 @@ CAPMIBBLMF,signal,Stochastic>80,175,49.1,-2.79
 CAPMIBBLMF,signal,Three Black Crows,34,44.1,-3.31
 CAPMIBBLMF,signal,Double Top,38,44.7,-3.56
 CAPMIBBLMF,signal,52w-low breakdown,51,52.9,-4.61
-CAPMIBBLMF,bounce,2025-08-18,7.5,9.5,27
 CAPMIBBLMF,bounce,2025-09-09,8.6,9.9,15
 CAPMIBBLMF,bounce,2025-11-13,5.5,7.1,29
 CAPMIBBLMF,bounce,2025-12-01,6.3,7.9,25
@@ -2452,6 +2451,7 @@ CAPMIBBLMF,bounce,2025-12-24,7.2,8.7,21
 CAPMIBBLMF,bounce,2026-03-16,7.2,8.6,19
 CAPMIBBLMF,bounce,2026-03-30,7.9,9.3,18
 CAPMIBBLMF,bounce,2026-04-20,8.4,10.4,24
+CAPMIBBLMF,bounce,2026-06-23,9.1,15.7,73
 CENTRALINS,signal,Stretch<-30% vs MA200,34,58.8,14.02
 CENTRALINS,signal,RSI<30 oversold,127,70.9,7.56
 CENTRALINS,signal,Below lower Bollinger,175,60.0,2.19
@@ -3116,7 +3116,6 @@ DGIC,signal,Three Outside Down,34,64.7,0.02
 DGIC,signal,Bearish Engulfing,60,50.0,-0.62
 DGIC,signal,MACD bull cross,32,31.2,-1.21
 DGIC,signal,Above upper Bollinger,71,54.9,-1.26
-DGIC,bounce,2025-03-23,21.0,33.7,60
 DGIC,bounce,2025-06-22,19.4,27.0,39
 DGIC,bounce,2025-08-10,21.7,25.4,17
 DGIC,bounce,2025-11-16,16.9,21.0,24
@@ -3124,6 +3123,7 @@ DGIC,bounce,2026-01-08,19.3,23.8,23
 DGIC,bounce,2026-03-08,17.9,24.3,36
 DGIC,bounce,2026-05-12,22.2,26.7,20
 DGIC,bounce,2026-05-24,23.4,31.5,35
+DGIC,bounce,2026-06-22,26.6,37.3,40
 DHAKABANK,signal,RSI>70 overbought,140,69.3,0.96
 DHAKABANK,signal,Bullish Engulfing,88,48.9,0.4
 DHAKABANK,signal,Inverted Hammer,63,49.2,0.15
@@ -3275,7 +3275,6 @@ DSHGARME,signal,Evening Star,48,41.7,-4.17
 DSHGARME,signal,RSI>70 overbought,211,53.6,-4.28
 DSHGARME,signal,Dark Cloud Cover,32,59.4,-4.39
 DSHGARME,signal,Above upper Bollinger,262,55.3,-4.88
-DSHGARME,bounce,2025-11-23,96.0,114.9,20
 DSHGARME,bounce,2025-12-04,103.0,119.0,16
 DSHGARME,bounce,2025-12-21,105.1,122.9,17
 DSHGARME,bounce,2026-01-29,92.4,123.0,33
@@ -3283,6 +3282,7 @@ DSHGARME,bounce,2026-04-20,109.0,134.0,23
 DSHGARME,bounce,2026-04-27,116.0,142.7,23
 DSHGARME,bounce,2026-05-18,116.6,160.5,38
 DSHGARME,bounce,2026-06-23,141.0,164.0,16
+DSHGARME,bounce,2026-07-08,147.0,180.5,23
 DSSL,signal,Stretch<-30% vs MA200,106,71.7,6.14
 DSSL,signal,52w-high breakout,38,55.3,4.37
 DSSL,signal,Price reclaims MA200,41,51.2,3.68
@@ -3625,7 +3625,6 @@ ECABLES,signal,Bearish Marubozu,42,42.9,-1.92
 ECABLES,signal,Hanging Man,39,61.5,-2.38
 ECABLES,signal,Shooting Star,34,52.9,-3.31
 ECABLES,signal,Three Black Crows,49,32.7,-3.78
-ECABLES,bounce,2025-07-29,112.1,129.8,16
 ECABLES,bounce,2025-08-12,118.0,139.2,18
 ECABLES,bounce,2025-08-20,128.0,150.8,18
 ECABLES,bounce,2025-10-20,110.1,127.0,15
@@ -3633,6 +3632,7 @@ ECABLES,bounce,2025-11-16,99.0,119.0,20
 ECABLES,bounce,2025-12-04,106.5,127.0,19
 ECABLES,bounce,2026-02-22,105.0,122.9,17
 ECABLES,bounce,2026-03-08,107.6,137.8,28
+ECABLES,bounce,2026-06-16,121.0,157.7,30
 EGEN,signal,Bearish Engulfing,59,64.4,0.92
 EGEN,signal,Below lower Bollinger,49,46.9,0.24
 EGEN,signal,RSI<30 oversold,42,50.0,0.22
@@ -3739,7 +3739,6 @@ EMERALDOIL,signal,Stretch>50% vs MA200,266,49.2,-4.23
 EMERALDOIL,signal,Stochastic>80,357,55.2,-4.68
 EMERALDOIL,signal,Above upper Bollinger,174,53.4,-6.21
 EMERALDOIL,signal,RSI>70 overbought,170,40.6,-11.86
-EMERALDOIL,bounce,2026-02-02,12.0,16.5,38
 EMERALDOIL,bounce,2026-02-22,13.8,19.0,38
 EMERALDOIL,bounce,2026-04-30,13.4,16.2,21
 EMERALDOIL,bounce,2026-05-11,14.5,17.8,23
@@ -3747,6 +3746,7 @@ EMERALDOIL,bounce,2026-05-19,16.2,23.1,43
 EMERALDOIL,bounce,2026-06-03,20.9,27.0,29
 EMERALDOIL,bounce,2026-06-14,21.4,24.9,16
 EMERALDOIL,bounce,2026-06-22,21.6,31.5,46
+EMERALDOIL,bounce,2026-07-13,27.3,31.7,16
 ENVOYTEX,signal,RSI<30 oversold,87,59.8,3.4
 ENVOYTEX,signal,Below lower Bollinger,149,57.7,1.76
 ENVOYTEX,signal,Stochastic>80,303,68.0,1.47
@@ -4064,7 +4064,6 @@ FASFIN,signal,Below lower Bollinger,173,35.3,-2.0
 FASFIN,signal,52w-low breakdown,115,53.9,-2.02
 FASFIN,signal,Price reclaims MA200,69,34.8,-2.27
 FASFIN,signal,52w-high breakout,37,29.7,-4.99
-FASFIN,bounce,2026-06-18,1.2,1.4,17
 FASFIN,bounce,2026-06-21,1.2,1.4,17
 FASFIN,bounce,2026-06-22,1.2,1.4,17
 FASFIN,bounce,2026-06-23,1.2,1.5,25
@@ -4072,6 +4071,7 @@ FASFIN,bounce,2026-06-29,1.2,1.4,17
 FASFIN,bounce,2026-07-01,1.2,1.4,17
 FASFIN,bounce,2026-07-08,1.2,1.4,17
 FASFIN,bounce,2026-07-09,1.2,1.4,17
+FASFIN,bounce,2026-07-12,1.2,1.4,17
 FBFIF,signal,Above upper Bollinger,134,65.7,1.07
 FBFIF,signal,Stochastic>80,222,63.1,0.99
 FBFIF,signal,Below lower Bollinger,111,60.4,0.73
@@ -5330,7 +5330,6 @@ ICBEPMF1S1,signal,Double Bottom,52,32.7,-2.33
 ICBEPMF1S1,signal,52w-low breakdown,81,44.4,-2.73
 ICBEPMF1S1,signal,Above the Stomach,44,34.1,-3.19
 ICBEPMF1S1,signal,52w-high breakout,31,12.9,-6.99
-ICBEPMF1S1,bounce,2025-11-16,3.3,4.0,21
 ICBEPMF1S1,bounce,2025-12-24,3.2,3.7,16
 ICBEPMF1S1,bounce,2026-01-25,3.4,5.2,53
 ICBEPMF1S1,bounce,2026-03-08,4.5,5.6,24
@@ -5338,6 +5337,7 @@ ICBEPMF1S1,bounce,2026-03-29,5.0,6.1,22
 ICBEPMF1S1,bounce,2026-04-22,5.3,6.8,28
 ICBEPMF1S1,bounce,2026-05-12,5.4,7.8,44
 ICBEPMF1S1,bounce,2026-06-15,5.9,6.8,15
+ICBEPMF1S1,bounce,2026-06-21,5.9,6.8,15
 ICBIBANK,signal,Stretch>50% vs MA200,33,63.6,5.57
 ICBIBANK,signal,Stretch<-30% vs MA200,52,63.5,3.55
 ICBIBANK,signal,RSI<30 oversold,122,57.4,2.37
@@ -6595,7 +6595,6 @@ LRBDL,signal,Stretch<-30% vs MA200,122,51.6,0.89
 LRBDL,signal,Bearish Engulfing,69,56.5,0.26
 LRBDL,signal,Bullish Harami,50,38.0,-0.67
 LRBDL,signal,52w-low breakdown,46,37.0,-6.01
-LRBDL,bounce,2025-06-23,13.4,15.7,17
 LRBDL,bounce,2025-08-24,13.5,16.0,19
 LRBDL,bounce,2025-11-16,9.0,13.3,48
 LRBDL,bounce,2025-11-30,9.9,11.7,18
@@ -6603,6 +6602,7 @@ LRBDL,bounce,2026-02-01,8.5,10.8,27
 LRBDL,bounce,2026-03-08,9.6,11.2,17
 LRBDL,bounce,2026-04-06,9.4,10.9,16
 LRBDL,bounce,2026-05-10,9.5,12.8,35
+LRBDL,bounce,2026-06-23,11.6,16.3,41
 LRGLOBMF1,signal,Stretch<-30% vs MA200,34,55.9,3.99
 LRGLOBMF1,signal,RSI>70 overbought,113,69.0,2.24
 LRGLOBMF1,signal,Below the Stomach,39,56.4,0.75
@@ -7529,7 +7529,6 @@ NAHEEACP,signal,Three Black Crows,33,54.5,-1.36
 NAHEEACP,signal,Below lower Bollinger,71,43.7,-1.4
 NAHEEACP,signal,Three Outside Down,64,53.1,-2.04
 NAHEEACP,signal,Stretch<-30% vs MA200,198,35.9,-2.68
-NAHEEACP,bounce,2025-11-16,13.9,17.7,27
 NAHEEACP,bounce,2025-11-23,15.7,19.0,21
 NAHEEACP,bounce,2025-12-17,16.8,20.0,19
 NAHEEACP,bounce,2026-01-26,16.3,23.6,45
@@ -7537,6 +7536,7 @@ NAHEEACP,bounce,2026-03-08,18.7,23.3,25
 NAHEEACP,bounce,2026-04-06,19.9,29.0,46
 NAHEEACP,bounce,2026-04-29,22.1,42.0,90
 NAHEEACP,bounce,2026-06-22,31.6,37.3,18
+NAHEEACP,bounce,2026-06-29,34.2,42.0,23
 NATLIFEINS,signal,Stretch<-30% vs MA200,67,56.7,3.2
 NATLIFEINS,signal,52w-high breakout,35,42.9,2.95
 NATLIFEINS,signal,Bearish Marubozu,32,68.8,1.27
@@ -8944,7 +8944,6 @@ PREMIERCEM,signal,MACD bull cross,108,36.1,-1.9
 PREMIERCEM,signal,Above the Stomach,38,31.6,-2.01
 PREMIERCEM,signal,Price reclaims MA200,65,33.8,-2.35
 PREMIERCEM,signal,Three Black Crows,34,32.4,-3.54
-PREMIERCEM,bounce,2024-10-27,55.6,66.4,19
 PREMIERCEM,bounce,2025-01-19,43.0,51.9,21
 PREMIERCEM,bounce,2025-01-30,41.1,63.0,53
 PREMIERCEM,bounce,2025-06-01,44.3,53.3,20
@@ -8952,6 +8951,7 @@ PREMIERCEM,bounce,2025-08-17,45.9,53.5,17
 PREMIERCEM,bounce,2025-11-13,37.0,43.9,19
 PREMIERCEM,bounce,2026-04-29,34.9,42.8,23
 PREMIERCEM,bounce,2026-05-11,37.5,52.9,41
+PREMIERCEM,bounce,2026-06-22,44.9,56.0,25
 PREMIERLEA,signal,Stretch<-30% vs MA200,220,60.9,6.03
 PREMIERLEA,signal,RSI>70 overbought,172,65.1,1.49
 PREMIERLEA,signal,Three Black Crows,50,70.0,1.37
@@ -9415,7 +9415,6 @@ QUASEMIND,signal,Double Top,62,50.0,-1.27
 QUASEMIND,signal,Bearish Engulfing,225,53.8,-1.34
 QUASEMIND,signal,52w-low breakdown,93,40.9,-4.05
 QUASEMIND,signal,Three Black Crows,109,37.6,-4.28
-QUASEMIND,bounce,2025-06-23,29.5,41.5,41
 QUASEMIND,bounce,2025-07-31,38.1,44.8,18
 QUASEMIND,bounce,2025-08-12,40.5,49.0,21
 QUASEMIND,bounce,2025-10-20,35.3,43.5,23
@@ -9423,6 +9422,7 @@ QUASEMIND,bounce,2025-11-16,35.6,44.9,26
 QUASEMIND,bounce,2026-01-26,37.0,45.3,22
 QUASEMIND,bounce,2026-03-09,35.5,42.8,21
 QUASEMIND,bounce,2026-05-10,39.1,47.9,23
+QUASEMIND,bounce,2026-06-08,43.0,49.8,16
 QUEENSOUTH,signal,RSI>70 overbought,39,69.2,4.99
 QUEENSOUTH,signal,Stretch<-30% vs MA200,70,70.0,4.75
 QUEENSOUTH,signal,RSI<30 oversold,75,62.7,2.67
@@ -10474,7 +10474,6 @@ SEAPEARL,signal,RSI<30 oversold,118,44.1,-6.12
 SEAPEARL,signal,Stretch>50% vs MA200,153,37.3,-8.18
 SEAPEARL,signal,Below lower Bollinger,77,36.4,-9.48
 SEAPEARL,signal,RSI>70 overbought,97,25.8,-10.51
-SEAPEARL,bounce,2025-05-28,42.3,61.7,46
 SEAPEARL,bounce,2025-08-10,49.2,61.5,25
 SEAPEARL,bounce,2025-10-28,33.2,40.8,23
 SEAPEARL,bounce,2025-11-16,29.3,36.9,26
@@ -10482,6 +10481,7 @@ SEAPEARL,bounce,2026-01-29,30.0,35.3,18
 SEAPEARL,bounce,2026-03-01,31.0,38.8,25
 SEAPEARL,bounce,2026-03-09,34.3,41.4,21
 SEAPEARL,bounce,2026-05-03,33.5,38.6,15
+SEAPEARL,bounce,2026-06-23,34.9,45.7,31
 SEMLFBSLGF,signal,RSI<30 oversold,55,67.3,3.55
 SEMLFBSLGF,signal,RSI>70 overbought,44,70.5,3.0
 SEMLFBSLGF,signal,Below lower Bollinger,63,50.8,1.68
@@ -11925,7 +11925,6 @@ UNIQUEHRL,signal,MACD bull cross,123,36.6,-1.12
 UNIQUEHRL,signal,Bullish Harami,154,44.2,-1.13
 UNIQUEHRL,signal,52w-low breakdown,101,48.5,-1.58
 UNIQUEHRL,signal,52w-high breakout,31,38.7,-1.95
-UNIQUEHRL,bounce,2023-08-16,59.5,74.6,25
 UNIQUEHRL,bounce,2023-11-20,55.2,64.0,16
 UNIQUEHRL,bounce,2024-06-11,48.8,59.0,21
 UNIQUEHRL,bounce,2024-08-08,49.0,59.4,21
@@ -11933,6 +11932,7 @@ UNIQUEHRL,bounce,2024-10-28,44.2,52.8,19
 UNIQUEHRL,bounce,2025-06-15,31.3,42.6,36
 UNIQUEHRL,bounce,2025-07-30,38.5,45.9,19
 UNIQUEHRL,bounce,2025-10-19,35.1,40.8,16
+UNIQUEHRL,bounce,2026-05-11,36.5,49.8,36
 UNITEDFIN,signal,Stretch<-30% vs MA200,83,74.7,6.71
 UNITEDFIN,signal,RSI<30 oversold,180,60.0,1.63
 UNITEDFIN,signal,Double Bottom,43,55.8,1.11
